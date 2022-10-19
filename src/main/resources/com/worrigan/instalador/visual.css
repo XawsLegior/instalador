@@ -1,0 +1,26 @@
+/* ##### JANELA PRINCIPAL ##### */
+#MainWindow{
+    -fx-background-color: linear-gradient(to bottom, black, rgb(0,0,0,0.9));
+}
+
+Text{
+    -fx-fill: lime;
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+}
+
+#btnInstalar{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-background-color: darkblue;
+    -fx-text-fill: lime;
+    -fx-border-color: cyan;
+    -fx-border-radius: 10px;
+    -fx-border-size: 1px;
+    -fx-background-radius: 10px;
+}
+
+#btnPoliticas{
+    -fx-text-fill: lime;
+    -fx-background-color: none;
+}
