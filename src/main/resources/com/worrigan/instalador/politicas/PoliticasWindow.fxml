@@ -14,6 +14,6 @@
          </image>
       </ImageView>
       <Button id="btnInstalar" fx:id="btnVoltarPolitica" layoutX="529.0" layoutY="511.0" mnemonicParsing="false" onMouseClicked="#onVoltar" prefHeight="38.0" prefWidth="94.0" text="Voltar" />
-      <WebView id="htmLicence" fx:id="htmLicence" layoutX="229.0" layoutY="7.0" prefHeight="498.0" prefWidth="566.0" />
+      <WebView id="htmLicence" fx:id="htmLicence" layoutX="229.0" layoutY="7.0" opacity="0.7" prefHeight="498.0" prefWidth="566.0" />
    </children>
 </Pane>

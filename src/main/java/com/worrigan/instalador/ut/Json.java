@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipInputStream;
 
 public class Json {
     private static final HashMap<String, String> json = new HashMap<>();
@@ -15,7 +17,6 @@ public class Json {
             URL f = MainApplication.class.getResource("software/config.ini");
             BufferedReader dados = new BufferedReader(new InputStreamReader(f.openStream()));
             Object[] linhas = dados.lines().toArray();
-
             for(Object dadosLinha: linhas){
                 String dado = new String(String.valueOf(dadosLinha).getBytes(), StandardCharsets.UTF_8);
                 if(dado == null || dado.startsWith("#")){
@@ -35,6 +36,9 @@ public class Json {
 
     }
 
+    public static void add(String index, String valor){
+        json.put(index, valor);
+    }
     public static HashMap<String, String> get(){
         return json;
     }

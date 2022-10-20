@@ -1,9 +1,12 @@
 package com.worrigan.instalador;
 
+import com.worrigan.instalador.install.InstallApplication;
 import com.worrigan.instalador.ut.Json;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 import com.worrigan.instalador.politicas.PoliticaApplication;
+
+import java.io.IOException;
 
 public class MainController {
     @FXML private Text titulo;
@@ -11,18 +14,14 @@ public class MainController {
     @FXML private Text descricao;
 
     @FXML
-    protected void onbtnAvancar() {
-
+    protected void onbtnAvancar() throws IOException {
+        InstallApplication.show();
+        MainApplication.close();
     }
 
     public void showPoliticaWindow() throws Exception {
-        try {
-            PoliticaApplication.show();
-            MainApplication.close();
-        }
-        catch (Exception e){
-            titulo.setText(String.valueOf(e));
-        }
+        PoliticaApplication.show();
+        MainApplication.close();
     }
 
     public void initialize() {
