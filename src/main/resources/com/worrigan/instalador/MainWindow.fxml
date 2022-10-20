@@ -8,31 +8,25 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?package com.worrigan.instalador ?>
 
-<Pane id="MainWindow" maxHeight="565" maxWidth="551" minHeight="565.0" minWidth="551.0" prefHeight="565.0" prefWidth="551.0" stylesheets="@visual.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<Pane id="MainWindow" maxHeight="565" maxWidth="551" minHeight="565.0" minWidth="800.0" prefHeight="565.0" prefWidth="551.0" stylesheets="@visual.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.worrigan.instalador.MainController">
    <children>
-      <ImageView fitHeight="366.0" fitWidth="364.0" layoutX="83.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true" rotate="-10.3">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="111.0" layoutX="-4.0" layoutY="456.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: rgb(0,0,0,0.3);" width="808.0" />
+      <ImageView fitHeight="602.0" fitWidth="702.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../Documents/chip.png" />
-         </image>
-      </ImageView>
-      <VBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="163.0" prefHeight="400.0" prefWidth="551.0">
+            <Image url="@fundo2.png" />
+         </image></ImageView>
+      <VBox alignment="TOP_CENTER" layoutX="258.0" layoutY="298.0" prefHeight="400.0" prefWidth="551.0">
          <children>
-            <StackPane prefHeight="150.0" prefWidth="551.0">
-               <children>
-                  <Text id="titulo" strokeType="OUTSIDE" strokeWidth="0.0" text="Título do seu software" textAlignment="CENTER" wrappingWidth="534.13671875" />
-               </children>
-            </StackPane>
-            <Button id="btnInstalar" mnemonicParsing="false" prefHeight="44.0" prefWidth="164.0" text="Avançar">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></Button>
             <StackPane prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <Button id="btnPoliticas" alignment="TOP_LEFT" graphicTextGap="0.0" mnemonicParsing="false" style="-fx-text-fill: DeepSkyBlue;" text="Termos e Licença.">
+                  <Button id="btnPoliticas" fx:id="btnPoliticas" alignment="TOP_LEFT" graphicTextGap="0.0" mnemonicParsing="false" onMouseClicked="#showPoliticaWindow" style="-fx-text-fill: DeepSkyBlue;" text="Termos e Licença.">
                      <graphic>
-                        <Button id="btnPoliticas" graphicTextGap="0.0" mnemonicParsing="false" text="Ao continuar você aceita os">
+                        <Button id="btnPoliticas" graphicTextGap="0.0" mnemonicParsing="false" onMouseClicked="#showPoliticaWindow" text="Ao continuar você aceita os">
                            <padding>
                               <Insets right="3.0" />
                            </padding>
@@ -44,7 +38,26 @@
                   </Button>
                </children>
             </StackPane>
-            <Text id="rodape" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 10px;" text="Copyright C 2022 Worrigan Soft Lab" />
+         </children>
+      </VBox>
+      <Text id="rodape" fx:id="rodape" layoutX="301.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 10px;" text="rodape" wrappingWidth="469.3330078125" />
+      <StackPane layoutX="274.0" layoutY="2.0" prefHeight="150.0" prefWidth="497.0">
+         <children>
+            <Text id="titulo" fx:id="titulo" strokeType="OUTSIDE" strokeWidth="0.0" text="Título do seu software" textAlignment="CENTER" wrappingWidth="534.13671875" />
+         </children>
+      </StackPane>
+      <Button id="btnInstalar" fx:id="btnAvancar" layoutX="549.0" layoutY="506.0" mnemonicParsing="false" onMouseClicked="#onbtnAvancar" prefHeight="40.0" prefWidth="120.0" text="Avançar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <VBox layoutX="301.0" layoutY="133.0" maxWidth="300.0" minWidth="480.0" prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <Text id="descricao" fx:id="descricao" strokeType="OUTSIDE" strokeWidth="0.0" text="descricao" textOrigin="TOP" wrappingWidth="480.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
          </children>
       </VBox>
    </children>

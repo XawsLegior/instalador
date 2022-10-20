@@ -1,7 +1,7 @@
 package com.worrigan.instalador;
 
 public class Launcher {
-    public static void main(String[] args) {
-        HelloApplication.main(args);
+    public static void main(String[] args){
+        MainApplication.main(args);
     }
 }

@@ -1,26 +1,44 @@
 /* ##### JANELA PRINCIPAL ##### */
-#MainWindow{
-    -fx-background-color: linear-gradient(to bottom, black, rgb(0,0,0,0.9));
+Pane{
+    -fx-background-image: url(fundo.jpg);
+    -fx-background-size: 110% 110%;
 }
 
 Text{
     -fx-fill: lime;
-    -fx-font-size: 50px;
+    -fx-font-size: 30px;
     -fx-font-weight: bold;
 }
 
 #btnInstalar{
-    -fx-font-size: 20px;
+    -fx-font-size: 18px;
     -fx-font-weight: bold;
-    -fx-background-color: darkblue;
-    -fx-text-fill: lime;
-    -fx-border-color: cyan;
+    -fx-background-color: none;
+    -fx-text-fill: white;
+    -fx-font-family: arial;
+    -fx-border-color: lime;
     -fx-border-radius: 10px;
     -fx-border-size: 1px;
     -fx-background-radius: 10px;
 }
-
+#btnInstalar:hover{
+    -fx-background-color: rgb(255,255,255,0.3);
+}
 #btnPoliticas{
-    -fx-text-fill: lime;
+    -fx-text-fill: white;
     -fx-background-color: none;
 }
+
+#titulo{
+    -fx-fill: white;
+    -fx-font-family: impact;
+}
+#descricao{
+    -fx-font-size: 12px;
+    -fx-fill: lime;
+    -fx-font-family: Arial;
+}
+#rodape{
+    -fx-fill: white;
+}
+
