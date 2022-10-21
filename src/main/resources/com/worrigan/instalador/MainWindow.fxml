@@ -15,7 +15,7 @@
 
 <Pane id="MainWindow" maxHeight="565" maxWidth="551" minHeight="565.0" minWidth="800.0" prefHeight="565.0" prefWidth="551.0" stylesheets="@visual.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.worrigan.instalador.MainController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="111.0" layoutX="-4.0" layoutY="456.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: rgb(0,0,0,0.3);" width="808.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="78.0" layoutX="-4.0" layoutY="489.0" opacity="0.24" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: gray;" width="808.0" />
       <ImageView fitHeight="602.0" fitWidth="702.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@fundo2.png" />

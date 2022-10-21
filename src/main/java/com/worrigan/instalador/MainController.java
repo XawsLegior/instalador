@@ -1,10 +1,10 @@
 package com.worrigan.instalador;
 
 import com.worrigan.instalador.install.InstallApplication;
+import com.worrigan.instalador.politicas.PoliticaApplication;
 import com.worrigan.instalador.ut.Json;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
-import com.worrigan.instalador.politicas.PoliticaApplication;
 
 import java.io.IOException;
 

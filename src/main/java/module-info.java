@@ -7,6 +7,6 @@ module com.worrigan.instalador {
 
     exports com.worrigan.instalador;
     exports com.worrigan.instalador.politicas;
-    exports com.worrigan.instalador.ut;
     exports com.worrigan.instalador.install;
+    exports com.worrigan.instalador.ut;
 }

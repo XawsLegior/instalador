@@ -14,8 +14,8 @@ public class PoliticaApplication{
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("/com/worrigan/instalador/politicas/PoliticasWindow.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
-        stage.setTitle("Politicas");
         stage.setScene(scene);
+        stage.setTitle("Politicas");
         stage.setResizable(false);
         stage.show();
         politicaStage = stage;
