@@ -1,5 +1,6 @@
 package com.worrigan.instalador;
 
+import com.worrigan.instalador.politicas.PoliticaController;
 import com.worrigan.instalador.ut.Json;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -5,6 +5,7 @@ import com.worrigan.instalador.ut.Json;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -20,6 +21,7 @@ public class InstallApplication {
             stage.setScene(scene);
             stage.setTitle(Json.get("titulo"));
             stage.setResizable(false);
+            stage.getIcons().add(new Image(MainApplication.class.getResource("/com/worrigan/instalador/icone.png").openStream()));
             stage.show();
             installStage = stage;
         }
