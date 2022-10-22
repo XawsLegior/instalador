@@ -29,6 +29,7 @@ public class Json {
                 if(item[0].equals("titulo")){
                     item[1] = item[1].toUpperCase();
                 }
+                item[1] = item[1].replace("\\n", "\n");
                 json.put(item[0], item[1]);
             }
         }

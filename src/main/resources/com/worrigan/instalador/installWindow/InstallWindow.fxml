@@ -49,7 +49,7 @@
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></Button>
-                        <ImageView fitHeight="120.0" fitWidth="136.0" layoutX="-17.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="68.0" fitWidth="84.0" layoutX="9.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../chip.png" />
                            </image>
@@ -67,7 +67,7 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <ImageView fitHeight="196.0" fitWidth="244.0" layoutX="191.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="103.0" fitWidth="152.0" layoutX="224.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../chip.png" />
                            </image>

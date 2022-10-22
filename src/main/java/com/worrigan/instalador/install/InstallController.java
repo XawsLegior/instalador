@@ -35,6 +35,9 @@ public class InstallController {
             DirectoryChooser directoryDialog = new DirectoryChooser();
             File selectedDirectory = directoryDialog.showDialog(InstallApplication.getStage());
             String caminho = selectedDirectory.toString().replace("file:/", "");
+            if(!caminho.endsWith("\\")){
+                caminho+= "\\";
+            }
             localDeInstalacao.setText(caminho + Json.get("nome") + "\\");
         }
         catch (Exception ignored){}
@@ -74,7 +77,7 @@ public class InstallController {
                 tamanhoEmMb = (double) (tamEmByte / 1024) / 1024;
                 tamanho += String.format("%.2f", tamanhoEmMb) + " MB";
             } else {
-                tamanho += tamEmByte + " KB";
+                tamanho += (tamEmByte / 1024) + " KB";
             }
             tamanhoNecessario.setText(tamanho);
         }
