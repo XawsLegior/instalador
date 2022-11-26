@@ -5,9 +5,8 @@ import com.worrigan.instalador.ut.Json;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.regex.Matcher;
@@ -24,13 +23,13 @@ public class PoliticaController {
         PoliticaApplication.close();
     }
 
-    public void initialize() throws IOException {
+    public void initialize() throws IOException, URISyntaxException {
         Node[] nodes = htmLicence.lookupAll(".tool-bar").toArray(new Node[0]);
         for(Node node: nodes){
             node.setVisible(false);
             node.setManaged(false);
         }
-        URL f = getClass().getResource("/com/worrigan/instalador/software/licença.html");
+        URL f = PoliticaApplication.class.getResource("/com/worrigan/instalador/software/licenca.html");
         BufferedReader licenca = new BufferedReader(new InputStreamReader(f.openStream()));
         Object[] linhas = licenca.lines().toArray();
         if(linhas.length <= 1){
@@ -42,6 +41,7 @@ public class PoliticaController {
             String dado = new String(String.valueOf(linha).getBytes(), StandardCharsets.UTF_8);
             dado = tratarLinkElementos(dado);
             conteudo.append(dado);
+            System.out.println(dado);
         }
         conteudoInicial = conteudo;
         Json.add("licenca", String.valueOf(conteudo));

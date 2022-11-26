@@ -9,3 +9,7 @@
 <p> 3º - Configure a janela de licenças > src/main/resources/com/worrigan/instalador/software > licença.html  </p>
 <p> 4º - Compile seu projeto real no formato.zip e coloque em > src/main/resources/com/worrigan/instalador/software/ </p>
 <p> 5º - Gere seu .jar e use algum compilador como o Launch4J para gerar o .exe! </p>
+<br><br>
+<p> Para passar imagem na tela de licença, informe dentro de chaves {}, a pasta path fica em /com/worrigan/instalador/</p>
+<p> Nesse caso para informar a imagem logo.png, que está dentro da pasta /com/worrigan/instalador/imagens, ficaria assim: </p>
+<p> {imagens/logo.png} </p>
