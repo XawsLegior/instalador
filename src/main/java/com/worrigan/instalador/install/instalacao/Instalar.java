@@ -6,15 +6,11 @@ import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.SingleSelectionModel;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+
 
 public class Instalar {
     private static InstallController parent;
@@ -52,12 +48,29 @@ public class Instalar {
     private static void instalacaoFinalizada(String caminho){
         Platform.runLater(()->{
             try {
+                status("Criando atalho");
                 /* CRIAR ATALHO */
-                String desktop = "C:/users/" + System.getenv("USERNAME") + "/desktop/" + Json.get("nome") + ".exe";
                 String programa = caminho + Json.get("nome") + ".exe";
-                Files.createSymbolicLink(Path.of(desktop), Path.of(programa));
-            } catch (IOException ignored) {}
-
+                FileWriter atl = new FileWriter("shortcut.vbs");
+                atl.write("Const strProgramTitle = \"%s\"\n".formatted(Json.get("nome")));
+                atl.write("Const strProgram = \"%s\"\n".formatted(programa));
+                atl.write("Const strWorkDir = \"%USERPROFILE%\"\n");
+                atl.write("Dim objShortcut, objShell\n");
+                atl.write("Set objShell = WScript.CreateObject (\"Wscript.Shell\")\n");
+                atl.write("strLPath = objShell.SpecialFolders (\"Desktop\")\n");
+                atl.write("Set objShortcut = objShell.CreateShortcut (strLPath & \"\\\" & strProgramTitle & \".lnk\")\n");
+                atl.write("objShortcut.TargetPath = strProgram\n");
+                atl.write("objShortcut.WorkingDirectory = strWorkDir\n");
+                atl.write("objShortcut.Description = strProgramTitle\n");
+                atl.write("objShortcut.Save\n");
+                atl.write("WScript.Quit\n");
+                atl.close();
+                Runtime.getRuntime().exec("cmd /c start shortcut.vbs");
+            } catch (IOException e) {
+                status("Erro ao gerar atalho: " + e);
+            }
+            status("Instalação finalizada!");
+            parent.statusTitle.setText("Instalação finalizada!");
             parent.btnFechar.setDisable(false);
             Alert fim = new Alert(Alert.AlertType.INFORMATION, "Instalação finalizada!");
             fim.setHeaderText("Você já pode fechar essa janela!");
@@ -85,7 +98,6 @@ public class Instalar {
                     zipEntry = zip.getNextEntry();
                     Thread.sleep(30);
                 }
-                status("Instalação finalizada!");
                 instalacaoFinalizada(installIn);
 
             } catch (Exception e) {

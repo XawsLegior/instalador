@@ -25,6 +25,8 @@ public class InstallController {
     @FXML public TabPane tabPane;
     @FXML public ListView<String> statusInstalacao;
     @FXML public Button btnFechar;
+    @FXML public Text statusTitle;
+
     private URL zipURL;
 
     public void onFechar(){
@@ -58,7 +60,7 @@ public class InstallController {
         instalar(caminho, this);
     }
 
-    public void initialize(){
+    public void initialize() throws IOException {
         localDeInstalacao.setText("C:\\" + Json.get("nome"));
         try {
             URL zipUrl = MainApplication.class.getResource("/com/worrigan/instalador/software/software.zip");
