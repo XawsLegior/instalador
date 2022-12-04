@@ -44,7 +44,7 @@ public class Instalar {
         });
     }
 
-    /* MOSTRAR MENSAGEM AO FINALIZAR A INSTALAÇÃO */
+    /* CRIAR ATALHO & MOSTRAR MENSAGEM AO FINALIZAR A INSTALAÇÃO */
     private static void instalacaoFinalizada(String caminho){
         Platform.runLater(()->{
             try {

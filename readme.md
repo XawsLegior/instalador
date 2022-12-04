@@ -13,3 +13,9 @@
 <p> Para passar imagem na tela de licença, informe dentro de chaves {}, a pasta path fica em /com/worrigan/instalador/</p>
 <p> Nesse caso para informar a imagem logo.png, que está dentro da pasta /com/worrigan/instalador/imagens, ficaria assim: </p>
 <p> {imagens/logo.png} </p>
+
+<br>
+<h3> Jdk utilizado: <a href="https://www.azul.com/downloads/?version=java-17-lts&os=windows&architecture=x86-32-bit&package=jdk-fx&show-old-builds=true"> JDK Zulu FX 17.0.5_x32 </a> </h3
+
+<img src="https://github.com/XawsLegior/instalador/blob/master/prints/print2.png" width="500"/>
+<img src="https://github.com/XawsLegior/instalador/blob/master/prints/print3.png" width="500"/>
