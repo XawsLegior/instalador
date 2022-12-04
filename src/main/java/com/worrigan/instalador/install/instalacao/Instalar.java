@@ -54,7 +54,7 @@ public class Instalar {
                 FileWriter atl = new FileWriter("shortcut.vbs");
                 atl.write("Const strProgramTitle = \"%s\"\n".formatted(Json.get("nome")));
                 atl.write("Const strProgram = \"%s\"\n".formatted(programa));
-                atl.write("Const strWorkDir = \"%USERPROFILE%\"\n");
+                atl.write("Const strWorkDir = \"%s\"\n".formatted(caminho));
                 atl.write("Dim objShortcut, objShell\n");
                 atl.write("Set objShell = WScript.CreateObject (\"Wscript.Shell\")\n");
                 atl.write("strLPath = objShell.SpecialFolders (\"Desktop\")\n");

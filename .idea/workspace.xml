@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6e7b85d-dfad-4af1-97ef-e3dcc0c9eacc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Instalador/install.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Instalador/install.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/instalador/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/instalador/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/instalador/install/InstallController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/instalador/install/InstallController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/worrigan/instalador/install/instalacao/Instalar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/worrigan/instalador/install/instalacao/Instalar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worrigan/instalador/installWindow/InstallWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/worrigan/instalador/installWindow/InstallWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worrigan/instalador/software/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/worrigan/instalador/software/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/worrigan/instalador/software/software.zip" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/worrigan/instalador/software/software.zip" afterDir="false" />
-    </list>
+    <list default="true" id="b6e7b85d-dfad-4af1-97ef-e3dcc0c9eacc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
